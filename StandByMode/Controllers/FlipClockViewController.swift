@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FlipClockViewController: UIViewController {
  
     @IBOutlet weak var hourImageView: UIImageView!
     @IBOutlet weak var minuteImageView: UIImageView!
@@ -23,16 +23,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var trackListButton: UIButton!
-    
+    @IBOutlet weak var progressSlider: CustomSlider!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var remainingLabel: UILabel!
     @IBOutlet weak var currentTrackNameLabel: MarqueeLabel!
     
     private var contextMenu: UICContextMenu!
     private let playerManager = MusicPlayerManager.shared
     private var playerItems: [MusicPlayerItemInfo] = []
-    private var remoteControlMode: MusicRemoteControlMode = .skip
+    private var remoteControlMode: MusicRemoteControlMode = .nextprev
     
     private var check = false
     private var value = 0
+    private var updateTimer: Timer? = nil
     private let currentDevice = UIDevice.current
     private let tracks = DataProvider.shared.getLocalTracks()
     
@@ -54,13 +57,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Prevent screen lock
-        UIApplication.shared.isIdleTimerDisabled = true
-        UIScreen.main.brightness = 0.0
-        
         setupSubViews()
-        
-        updateUI()
         
         prepareDataSource()
         
@@ -78,7 +75,23 @@ class ViewController: UIViewController {
     
     override  func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         MarqueeLabel.controllerViewDidAppear(self)
+        
+        updateUI()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let updateTimer {
+            updateTimer.invalidate()
+            self.updateTimer = nil
+        }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        true
     }
     
     private final func setupSubViews() {
@@ -97,7 +110,9 @@ class ViewController: UIViewController {
     
     private final func updateUI() {
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        guard updateTimer == nil else { return }
+        
+        updateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             
             let today = Date()
             
@@ -119,6 +134,7 @@ class ViewController: UIViewController {
             self.monthLabel.text = self.dateFormatter.string(from: today)
             
         }
+        updateTimer?.fire()
     }
     
     // MARK: - Helpers
@@ -181,6 +197,22 @@ class ViewController: UIViewController {
         return shuffleButton.isSelected
     }
     
+    private func stringFromTimeInterval(interval: TimeInterval) -> String {
+        if interval.isNaN { return "" }
+        
+        let ti = NSInteger(interval)
+        
+        let seconds = ti % 60
+        let minutes = (ti / 60) % 60
+        let hours = (ti / 3600)
+        
+        if hours > 0 {
+            return String(format: "%0.2d:%0.2d:%0.2d",hours, minutes, seconds)
+        } else {
+            return String(format: "%0.2d:%0.2d", minutes ,seconds)
+        }
+    }
+    
     // MARK: - Action
     
     @objc
@@ -241,7 +273,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UIContextMenuDelegate {
+extension FlipClockViewController: UIContextMenuDelegate {
     
     func contextMenu(_ contextMenu: UICContextMenu?, didSelectTrack track: Track) {
         if let selectedItemIndex = playerItems.firstIndex(where: { $0.title == track.title }) {
@@ -254,7 +286,7 @@ extension ViewController: UIContextMenuDelegate {
     }
 }
 
-extension ViewController: MusicPlayerDelegate {
+extension FlipClockViewController: MusicPlayerDelegate {
     
     func musicPlayerManager(_ playerManager: MusicPlayerManager, statusDidChange status: MusicPlayerStatus) {
         self.setPlayPauseButtonImage(status)
@@ -266,14 +298,14 @@ extension ViewController: MusicPlayerDelegate {
     }
     
     func musicPlayerManager(_ playerManager: MusicPlayerManager, progressDidUpdate percentage: Double) {
-//        guard self.progressSlider.isEnabled && !self.progressSlider.isTracking else {
-//            return
-//        }
-//
-//        self.progressSlider.setValue(Float(percentage), animated: true)
-//
-//        self.timeLabel.text = self.stringFromTimeInterval(interval: playerManager.currentTime)
-//        self.remainingLabel.text = self.stringFromTimeInterval(interval:(playerManager.duration - playerManager.currentTime))
+        guard self.progressSlider.isEnabled && !self.progressSlider.isTracking else {
+            return
+        }
+
+        self.progressSlider.setValue(Float(percentage), animated: true)
+
+        self.timeLabel.text = self.stringFromTimeInterval(interval: playerManager.currentTime)
+        self.remainingLabel.text = self.stringFromTimeInterval(interval:(playerManager.duration - playerManager.currentTime))
         
     }
     

@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		01FC99D929BE2ACA00FA036B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC99D829BE2ACA00FA036B /* AppDelegate.swift */; };
-		01FC99DD29BE2ACA00FA036B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC99DC29BE2ACA00FA036B /* ViewController.swift */; };
+		01FC99DD29BE2ACA00FA036B /* FlipClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC99DC29BE2ACA00FA036B /* FlipClockViewController.swift */; };
 		01FC99E029BE2ACA00FA036B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC99DE29BE2ACA00FA036B /* Main.storyboard */; };
 		01FC99E229BE2ACD00FA036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FC99E129BE2ACD00FA036B /* Assets.xcassets */; };
 		01FC99E529BE2ACD00FA036B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC99E329BE2ACD00FA036B /* LaunchScreen.storyboard */; };
+		F2509BF32AF1D00A00BCDFB3 /* SlidingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2509BF22AF1D00A00BCDFB3 /* SlidingContainerViewController.swift */; };
+		F2509BF52AF1D09C00BCDFB3 /* DigitalClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2509BF42AF1D09C00BCDFB3 /* DigitalClockViewController.swift */; };
+		F2509BF92AF1DD0300BCDFB3 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2509BF82AF1DD0300BCDFB3 /* CustomSlider.swift */; };
+		F2509BFC2AF1E21C00BCDFB3 /* flipclockblack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2509BFB2AF1E21C00BCDFB3 /* flipclockblack.ttf */; };
+		F27BFEB92AF28CD9000274C4 /* HalfAlphaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BFEB82AF28CD9000274C4 /* HalfAlphaViewController.swift */; };
+		F27BFEBB2AF28E73000274C4 /* octopuss.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27BFEBA2AF28E73000274C4 /* octopuss.ttf */; };
+		F27BFEBD2AF291CF000274C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BFEBC2AF291CF000274C4 /* Extensions.swift */; };
 		F2A245F92AF0F00D00A1B658 /* MusicPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A245F22AF0F00D00A1B658 /* MusicPlayerDelegate.swift */; };
 		F2A245FA2AF0F00D00A1B658 /* MusicPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A245F32AF0F00D00A1B658 /* MusicPlayerItem.swift */; };
 		F2A245FB2AF0F00D00A1B658 /* MusicPlayerItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A245F42AF0F00D00A1B658 /* MusicPlayerItemInfo.swift */; };
@@ -40,11 +47,18 @@
 /* Begin PBXFileReference section */
 		01FC99D529BE2ACA00FA036B /* StandByMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StandByMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FC99D829BE2ACA00FA036B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01FC99DC29BE2ACA00FA036B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01FC99DC29BE2ACA00FA036B /* FlipClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockViewController.swift; sourceTree = "<group>"; };
 		01FC99DF29BE2ACA00FA036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01FC99E129BE2ACD00FA036B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01FC99E429BE2ACD00FA036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01FC99E629BE2ACD00FA036B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2509BF22AF1D00A00BCDFB3 /* SlidingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingContainerViewController.swift; sourceTree = "<group>"; };
+		F2509BF42AF1D09C00BCDFB3 /* DigitalClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClockViewController.swift; sourceTree = "<group>"; };
+		F2509BF82AF1DD0300BCDFB3 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		F2509BFB2AF1E21C00BCDFB3 /* flipclockblack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flipclockblack.ttf; sourceTree = "<group>"; };
+		F27BFEB82AF28CD9000274C4 /* HalfAlphaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfAlphaViewController.swift; sourceTree = "<group>"; };
+		F27BFEBA2AF28E73000274C4 /* octopuss.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octopuss.ttf; sourceTree = "<group>"; };
+		F27BFEBC2AF291CF000274C4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F2A245F22AF0F00D00A1B658 /* MusicPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerDelegate.swift; sourceTree = "<group>"; };
 		F2A245F32AF0F00D00A1B658 /* MusicPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerItem.swift; sourceTree = "<group>"; };
 		F2A245F42AF0F00D00A1B658 /* MusicPlayerItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerItemInfo.swift; sourceTree = "<group>"; };
@@ -112,6 +126,15 @@
 			path = StandByMode;
 			sourceTree = "<group>";
 		};
+		F2509BFA2AF1E20D00BCDFB3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F27BFEBA2AF28E73000274C4 /* octopuss.ttf */,
+				F2509BFB2AF1E21C00BCDFB3 /* flipclockblack.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F2A245F12AF0EFF500A1B658 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				F2A246012AF0F1A000A1B658 /* DataProvider.swift */,
+				F27BFEBC2AF291CF000274C4 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -145,6 +169,7 @@
 		F2A246062AF0F7AB00A1B658 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2509BFA2AF1E20D00BCDFB3 /* Fonts */,
 				F2A246072AF0F7BB00A1B658 /* Audios */,
 				01FC99E129BE2ACD00FA036B /* Assets.xcassets */,
 				01FC99E629BE2ACD00FA036B /* Info.plist */,
@@ -173,7 +198,10 @@
 		F2A246222AF0FD3300A1B658 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				01FC99DC29BE2ACA00FA036B /* ViewController.swift */,
+				F2509BF22AF1D00A00BCDFB3 /* SlidingContainerViewController.swift */,
+				01FC99DC29BE2ACA00FA036B /* FlipClockViewController.swift */,
+				F2509BF42AF1D09C00BCDFB3 /* DigitalClockViewController.swift */,
+				F27BFEB82AF28CD9000274C4 /* HalfAlphaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,8 +226,9 @@
 		F2A246252AF0FE8100A1B658 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				F2A2462D2AF1456000A1B658 /* MarqueeLabel.swift */,
 				F2A2462C2AF1016400A1B658 /* UIContextMenu */,
+				F2509BF82AF1DD0300BCDFB3 /* CustomSlider.swift */,
+				F2A2462D2AF1456000A1B658 /* MarqueeLabel.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -279,10 +308,12 @@
 				F2A246182AF0F80200A1B658 /* WhenWordsAreWind.mp3 in Resources */,
 				F2A2461B2AF0F80200A1B658 /* ParisHeart.mp3 in Resources */,
 				F2A246212AF0F80200A1B658 /* CyclesOfLife.mp3 in Resources */,
+				F27BFEBB2AF28E73000274C4 /* octopuss.ttf in Resources */,
 				F2A246162AF0F80200A1B658 /* RebirthOfAThoughBetween.mp3 in Resources */,
 				01FC99E529BE2ACD00FA036B /* LaunchScreen.storyboard in Resources */,
 				F2A2461F2AF0F80200A1B658 /* MessageFromTheStars.mp3 in Resources */,
 				01FC99E229BE2ACD00FA036B /* Assets.xcassets in Resources */,
+				F2509BFC2AF1E21C00BCDFB3 /* flipclockblack.ttf in Resources */,
 				01FC99E029BE2ACA00FA036B /* Main.storyboard in Resources */,
 				F2A2461A2AF0F80200A1B658 /* EventideDreams.mp3 in Resources */,
 			);
@@ -295,13 +326,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FC99DD29BE2ACA00FA036B /* ViewController.swift in Sources */,
+				01FC99DD29BE2ACA00FA036B /* FlipClockViewController.swift in Sources */,
+				F2509BF92AF1DD0300BCDFB3 /* CustomSlider.swift in Sources */,
 				F2A245FD2AF0F00D00A1B658 /* Defaults.swift in Sources */,
 				F2A245FB2AF0F00D00A1B658 /* MusicPlayerItemInfo.swift in Sources */,
+				F2509BF32AF1D00A00BCDFB3 /* SlidingContainerViewController.swift in Sources */,
 				01FC99D929BE2ACA00FA036B /* AppDelegate.swift in Sources */,
+				F27BFEB92AF28CD9000274C4 /* HalfAlphaViewController.swift in Sources */,
+				F27BFEBD2AF291CF000274C4 /* Extensions.swift in Sources */,
 				F2A245FA2AF0F00D00A1B658 /* MusicPlayerItem.swift in Sources */,
 				F2A246022AF0F1A000A1B658 /* DataProvider.swift in Sources */,
 				F2A245FF2AF0F00D00A1B658 /* MusicPlayerStatus.swift in Sources */,
+				F2509BF52AF1D09C00BCDFB3 /* DigitalClockViewController.swift in Sources */,
 				F2A245F92AF0F00D00A1B658 /* MusicPlayerDelegate.swift in Sources */,
 				F2A245FC2AF0F00D00A1B658 /* MusicQueuePlayer.swift in Sources */,
 				F2A2462B2AF0FF1800A1B658 /* MenuCell.swift in Sources */,

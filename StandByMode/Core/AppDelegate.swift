@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        let initialVC = SlidingContainerViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        window?.rootViewController = initialVC
         window?.makeKeyAndVisible()
 
         return true
