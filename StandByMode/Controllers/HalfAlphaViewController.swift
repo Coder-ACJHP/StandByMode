@@ -9,7 +9,7 @@ import UIKit
 
 class HalfAlphaViewController: UIViewController {
     
-    @IBOutlet weak var timeLabel: UILabel!
+    private var crockedCharsView: CrockedCharsView!
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -19,24 +19,18 @@ class HalfAlphaViewController: UIViewController {
         return formatter
     }()
     
-    private var lastColor: UIColor = .white
-    private let blinkPattern = ":"
     private var updateTimer: Timer? = nil
-    private let colorList: Array<UIColor> = [
-        UIColor(hexString: "#0793fe"),
-        UIColor(hexString: "#8ff3bc"),
-        UIColor(hexString: "#d9e5ec"),
-        UIColor(hexString: "#52d7fa"),
-        UIColor(hexString: "#08966e")
-    ]
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        crockedCharsView = CrockedCharsView(frame: view.bounds)
+        view.addSubview(crockedCharsView)
     }
     
     override  func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-                
+        
         updateUI()
     }
     
@@ -55,32 +49,6 @@ class HalfAlphaViewController: UIViewController {
     
     // MARK: - Helpers
     
-    private final func colorizeTimeText() {
-        
-        guard let text = timeLabel.text else { return }
-        
-        let attributedText = NSMutableAttributedString(string: text)
-        
-        let characterList = Array(text)
-        
-        for (index, char) in characterList.enumerated() {
-            
-            if let charRange = text.nsRange(of: String(char)) {
-            
-                if String(char) == blinkPattern {
-                    let color: UIColor = (lastColor == .white) ? .black : .white
-                    attributedText.addAttribute(.foregroundColor, value: color, range: charRange)
-                    lastColor = color
-                } else {
-                    let color = colorList[index]
-                    attributedText.addAttribute(.foregroundColor, value: color, range: charRange)
-                }
-            }
-        }
-        
-        timeLabel.attributedText = attributedText
-    }
-    
     private final func updateUI() {
         
         guard updateTimer == nil else { return }
@@ -88,12 +56,138 @@ class HalfAlphaViewController: UIViewController {
         updateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             
             let today = Date()
-            self.timeLabel.text = self.dateFormatter.string(from: today)
-            
-            self.colorizeTimeText()
-            
+            self.dateFormatter.dateFormat = "hh:mm"
+            self.crockedCharsView.drawingText = self.dateFormatter.string(from: today)
+            self.dateFormatter.dateFormat = "a"
+            self.crockedCharsView.hourType = self.dateFormatter.string(from: today)
+                        
         }
         updateTimer?.fire()
     }
 
+}
+
+class CrockedCharsView: UIView {
+    
+    public var drawingText: String = "" {
+        didSet {
+            drawText()
+            rotateGlyphs()
+        }
+    }
+    
+    public var hourType: String = "" {
+        didSet {
+            amPMLabel.text = hourType
+        }
+    }
+    
+    private let hStackView: UIStackView = {
+        let stackView = UIStackView(frame: .zero)
+        stackView.axis = .horizontal
+        stackView.distribution = .fillProportionally
+        stackView.spacing = .zero
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    private let amPMLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let colorList: Array<UIColor> = [
+        UIColor(hexString: "#0793fe"),
+        UIColor(hexString: "#8ff3bc"),
+        UIColor(hexString: "#ffffff"),
+        UIColor(hexString: "#52d7fa"),
+        UIColor(hexString: "#08966e")
+    ]
+    
+    private let rotationAngles: Array<CGFloat> = [
+        CGFloat.pi / 30,
+        CGFloat.pi / -30,
+        CGFloat.pi / 360,
+        CGFloat.pi / -40,
+        CGFloat.pi / 40
+    ]
+
+    private var counter = 0
+    private var lastBlinkedColor: UIColor = .white
+    private let font = UIFont(name: "octopuss", size: 450)!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        backgroundColor = .black
+        
+        addSubview(hStackView)
+        NSLayoutConstraint.activate([
+            hStackView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -50),
+            hStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            hStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            hStackView.heightAnchor.constraint(equalToConstant: frame.height / 1.9),
+        ])
+        
+        addSubview(amPMLabel)
+        NSLayoutConstraint.activate([
+            amPMLabel.topAnchor.constraint(equalTo: hStackView.bottomAnchor, constant: -10),
+            amPMLabel.centerXAnchor.constraint(equalTo: hStackView.centerXAnchor),
+            amPMLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 1),
+            amPMLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 1)
+        ])
+        
+        amPMLabel.font = font.withSize(200)
+        amPMLabel.textColor = colorList.randomElement()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func drawText() {
+        
+        hStackView.arrangedSubviews.forEach({
+            hStackView.removeArrangedSubview($0)
+            $0.removeFromSuperview()
+        })
+        
+        let characters = Array(drawingText)
+        
+        for (index, char) in characters.enumerated() {
+            
+            let drawingText = String(char)
+            let isSeparator = (drawingText == ":")
+            let foregroundColor: UIColor = isSeparator ? (lastBlinkedColor == .white ? .clear : .white) : colorList[index]
+            
+            let label = UILabel(frame: .zero)
+            label.font = font
+            label.textAlignment = .center
+            label.text = drawingText
+            label.minimumScaleFactor = 0.95
+            label.textColor = foregroundColor
+            
+            hStackView.addArrangedSubview(label)
+            label.sizeToFit()
+            
+            if isSeparator {
+                lastBlinkedColor = foregroundColor
+            }
+        }
+    }
+
+    private final func rotateGlyphs() {
+        
+        let visibleLabels = hStackView.arrangedSubviews.compactMap({ $0 as? UILabel })
+        
+        for (index, label) in visibleLabels.enumerated() {
+                
+            let rotationAngle = rotationAngles[index]
+            label.transform = label.transform.rotated(by: rotationAngle)
+        }
+    }
 }

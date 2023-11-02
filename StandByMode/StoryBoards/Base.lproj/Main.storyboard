@@ -13,9 +13,6 @@
         <array key="flipclockblack.ttf">
             <string>FLIPclockBlack</string>
         </array>
-        <array key="octopuss.ttf">
-            <string>Octopuss</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Flip Clock View Controller-->
@@ -374,26 +371,9 @@
                     <view key="view" contentMode="scaleToFill" id="GTf-4H-b6z">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-va-Fjh">
-                                <rect key="frame" x="30" y="65" width="964" height="703"/>
-                                <fontDescription key="fontDescription" name="Octopuss" family="Octopuss" pointSize="425"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3lJ-Z1-AX7"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fXI-va-Fjh" firstAttribute="leading" secondItem="3lJ-Z1-AX7" secondAttribute="leading" constant="30" id="2n3-3a-QAO"/>
-                            <constraint firstItem="fXI-va-Fjh" firstAttribute="top" secondItem="3lJ-Z1-AX7" secondAttribute="top" constant="45" id="7h9-wu-N3X"/>
-                            <constraint firstItem="3lJ-Z1-AX7" firstAttribute="trailing" secondItem="fXI-va-Fjh" secondAttribute="trailing" constant="30" id="WzT-9k-tdD"/>
-                            <constraint firstItem="3lJ-Z1-AX7" firstAttribute="bottom" secondItem="fXI-va-Fjh" secondAttribute="bottom" id="nzZ-yh-GAe"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="timeLabel" destination="fXI-va-Fjh" id="Q65-Yf-68a"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KoR-s7-4Up" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
