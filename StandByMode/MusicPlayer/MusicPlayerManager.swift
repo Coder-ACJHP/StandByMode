@@ -177,11 +177,11 @@ public final class MusicPlayerManager: NSObject {
     }
     
     public func setCommandCenterMode(mode: MusicRemoteControlMode) {
-            commandCenter.skipBackwardCommand.isEnabled = mode == .skip
-            commandCenter.skipForwardCommand.isEnabled = mode == .skip
+            commandCenter.skipBackwardCommand.isEnabled = (mode == .skip)
+            commandCenter.skipForwardCommand.isEnabled = (mode == .skip)
         
-            commandCenter.nextTrackCommand.isEnabled = mode == .nextprev
-            commandCenter.previousTrackCommand.isEnabled = mode == .nextprev
+            commandCenter.nextTrackCommand.isEnabled = (mode == .nextprev)
+            commandCenter.previousTrackCommand.isEnabled = (mode == .nextprev)
         
             commandCenter.seekForwardCommand.isEnabled = false
             commandCenter.seekBackwardCommand.isEnabled = false

@@ -12,11 +12,15 @@
 		01FC99E029BE2ACA00FA036B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC99DE29BE2ACA00FA036B /* Main.storyboard */; };
 		01FC99E229BE2ACD00FA036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FC99E129BE2ACD00FA036B /* Assets.xcassets */; };
 		01FC99E529BE2ACD00FA036B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC99E329BE2ACD00FA036B /* LaunchScreen.storyboard */; };
+		F2172CC52AF3935400E39914 /* CalendarClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2172CC42AF3935400E39914 /* CalendarClockViewController.swift */; };
+		F2172CC82AF3C69C00E39914 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2172CC72AF3C69C00E39914 /* CalendarView.swift */; };
+		F2172CCA2AF3C6B800E39914 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2172CC92AF3C6B800E39914 /* DayCell.swift */; };
+		F2172CCD2AF3D0F900E39914 /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2172CCC2AF3D0F900E39914 /* AnalogClockView.swift */; };
 		F2509BF32AF1D00A00BCDFB3 /* SlidingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2509BF22AF1D00A00BCDFB3 /* SlidingContainerViewController.swift */; };
 		F2509BF52AF1D09C00BCDFB3 /* DigitalClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2509BF42AF1D09C00BCDFB3 /* DigitalClockViewController.swift */; };
 		F2509BF92AF1DD0300BCDFB3 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2509BF82AF1DD0300BCDFB3 /* CustomSlider.swift */; };
 		F2509BFC2AF1E21C00BCDFB3 /* flipclockblack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2509BFB2AF1E21C00BCDFB3 /* flipclockblack.ttf */; };
-		F27BFEB92AF28CD9000274C4 /* HalfAlphaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BFEB82AF28CD9000274C4 /* HalfAlphaViewController.swift */; };
+		F27BFEB92AF28CD9000274C4 /* CrockedCharsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BFEB82AF28CD9000274C4 /* CrockedCharsViewController.swift */; };
 		F27BFEBB2AF28E73000274C4 /* octopuss.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F27BFEBA2AF28E73000274C4 /* octopuss.ttf */; };
 		F27BFEBD2AF291CF000274C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BFEBC2AF291CF000274C4 /* Extensions.swift */; };
 		F2A245F92AF0F00D00A1B658 /* MusicPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A245F22AF0F00D00A1B658 /* MusicPlayerDelegate.swift */; };
@@ -52,11 +56,15 @@
 		01FC99E129BE2ACD00FA036B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01FC99E429BE2ACD00FA036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01FC99E629BE2ACD00FA036B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2172CC42AF3935400E39914 /* CalendarClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarClockViewController.swift; sourceTree = "<group>"; };
+		F2172CC72AF3C69C00E39914 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		F2172CC92AF3C6B800E39914 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		F2172CCC2AF3D0F900E39914 /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
 		F2509BF22AF1D00A00BCDFB3 /* SlidingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingContainerViewController.swift; sourceTree = "<group>"; };
 		F2509BF42AF1D09C00BCDFB3 /* DigitalClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClockViewController.swift; sourceTree = "<group>"; };
 		F2509BF82AF1DD0300BCDFB3 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		F2509BFB2AF1E21C00BCDFB3 /* flipclockblack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flipclockblack.ttf; sourceTree = "<group>"; };
-		F27BFEB82AF28CD9000274C4 /* HalfAlphaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfAlphaViewController.swift; sourceTree = "<group>"; };
+		F27BFEB82AF28CD9000274C4 /* CrockedCharsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrockedCharsViewController.swift; sourceTree = "<group>"; };
 		F27BFEBA2AF28E73000274C4 /* octopuss.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octopuss.ttf; sourceTree = "<group>"; };
 		F27BFEBC2AF291CF000274C4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F2A245F22AF0F00D00A1B658 /* MusicPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +132,23 @@
 				F2A246222AF0FD3300A1B658 /* Controllers */,
 			);
 			path = StandByMode;
+			sourceTree = "<group>";
+		};
+		F2172CC62AF3C68300E39914 /* UICalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				F2172CC72AF3C69C00E39914 /* CalendarView.swift */,
+				F2172CC92AF3C6B800E39914 /* DayCell.swift */,
+			);
+			path = UICalendarView;
+			sourceTree = "<group>";
+		};
+		F2172CCB2AF3D0E200E39914 /* AnalogClockView */ = {
+			isa = PBXGroup;
+			children = (
+				F2172CCC2AF3D0F900E39914 /* AnalogClockView.swift */,
+			);
+			path = AnalogClockView;
 			sourceTree = "<group>";
 		};
 		F2509BFA2AF1E20D00BCDFB3 /* Fonts */ = {
@@ -201,7 +226,8 @@
 				F2509BF22AF1D00A00BCDFB3 /* SlidingContainerViewController.swift */,
 				01FC99DC29BE2ACA00FA036B /* FlipClockViewController.swift */,
 				F2509BF42AF1D09C00BCDFB3 /* DigitalClockViewController.swift */,
-				F27BFEB82AF28CD9000274C4 /* HalfAlphaViewController.swift */,
+				F27BFEB82AF28CD9000274C4 /* CrockedCharsViewController.swift */,
+				F2172CC42AF3935400E39914 /* CalendarClockViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +252,8 @@
 		F2A246252AF0FE8100A1B658 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F2172CCB2AF3D0E200E39914 /* AnalogClockView */,
+				F2172CC62AF3C68300E39914 /* UICalendarView */,
 				F2A2462C2AF1016400A1B658 /* UIContextMenu */,
 				F2509BF82AF1DD0300BCDFB3 /* CustomSlider.swift */,
 				F2A2462D2AF1456000A1B658 /* MarqueeLabel.swift */,
@@ -332,11 +360,15 @@
 				F2A245FB2AF0F00D00A1B658 /* MusicPlayerItemInfo.swift in Sources */,
 				F2509BF32AF1D00A00BCDFB3 /* SlidingContainerViewController.swift in Sources */,
 				01FC99D929BE2ACA00FA036B /* AppDelegate.swift in Sources */,
-				F27BFEB92AF28CD9000274C4 /* HalfAlphaViewController.swift in Sources */,
+				F27BFEB92AF28CD9000274C4 /* CrockedCharsViewController.swift in Sources */,
 				F27BFEBD2AF291CF000274C4 /* Extensions.swift in Sources */,
+				F2172CCD2AF3D0F900E39914 /* AnalogClockView.swift in Sources */,
+				F2172CC82AF3C69C00E39914 /* CalendarView.swift in Sources */,
 				F2A245FA2AF0F00D00A1B658 /* MusicPlayerItem.swift in Sources */,
+				F2172CCA2AF3C6B800E39914 /* DayCell.swift in Sources */,
 				F2A246022AF0F1A000A1B658 /* DataProvider.swift in Sources */,
 				F2A245FF2AF0F00D00A1B658 /* MusicPlayerStatus.swift in Sources */,
+				F2172CC52AF3935400E39914 /* CalendarClockViewController.swift in Sources */,
 				F2509BF52AF1D09C00BCDFB3 /* DigitalClockViewController.swift in Sources */,
 				F2A245F92AF0F00D00A1B658 /* MusicPlayerDelegate.swift in Sources */,
 				F2A245FC2AF0F00D00A1B658 /* MusicQueuePlayer.swift in Sources */,
@@ -501,7 +533,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,7 +565,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

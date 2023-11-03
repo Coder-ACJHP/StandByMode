@@ -35,10 +35,26 @@ class DigitalClockViewController: UIViewController {
         return formatter
     }()
     
+    private var updateTimer: Timer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override  func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+                
         updateUI()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let updateTimer {
+            updateTimer.invalidate()
+            self.updateTimer = nil
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -47,11 +63,13 @@ class DigitalClockViewController: UIViewController {
     
     private final func updateUI() {
         
+        guard updateTimer == nil else { return }
+        
         UIView.animate(withDuration: 1.0, delay: .zero, options: [.curveLinear, .autoreverse, .repeat]) {
             self.secondsLabel.alpha = .zero
         }
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        updateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             let today = Date()
             
             self.dateFormatter.dateFormat = "hh"
@@ -71,6 +89,7 @@ class DigitalClockViewController: UIViewController {
             self.monthLabel.text = self.dateFormatter.string(from: today).uppercased()
             
         }
+        updateTimer?.fire()
     }
 
 }

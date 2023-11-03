@@ -31,7 +31,6 @@ class FlipClockViewController: UIViewController {
     private var contextMenu: UICContextMenu!
     private let playerManager = MusicPlayerManager.shared
     private var playerItems: [MusicPlayerItemInfo] = []
-    private var remoteControlMode: MusicRemoteControlMode = .nextprev
     
     private var check = false
     private var value = 0
@@ -62,15 +61,6 @@ class FlipClockViewController: UIViewController {
         prepareDataSource()
         
         preparePlayer()
-        
-        let action = #selector(orientationChanged)
-        NotificationCenter.default.addObserver(
-            self,
-            selector: action,
-            name: UIDevice.orientationDidChangeNotification,
-            object: nil
-        )
-        currentDevice.beginGeneratingDeviceOrientationNotifications()
     }
     
     override  func viewDidAppear(_ animated: Bool) {
@@ -214,38 +204,6 @@ class FlipClockViewController: UIViewController {
     }
     
     // MARK: - Action
-    
-    @objc
-    private final func changeRemoteControlMode() {
-        self.remoteControlMode = self.remoteControlMode == .skip ? .nextprev : .skip
-        playerManager.setCommandCenterMode(mode: self.remoteControlMode)
-    }
-    
-    @objc
-    private final func orientationChanged() {
-        
-//        switch currentDevice.orientation {
-//        case .landscapeLeft, .landscapeRight:
-//            // Transform 90 degrees
-//            if check {
-//                self.hourImageView.transform = self.hourImageView.transform.rotated(by: .pi / 2)
-//                self.minuteImageView.transform = self.minuteImageView.transform.rotated(by: .pi / 2)
-//                self.secondsImageView.transform = self.secondsImageView.transform.rotated(by: .pi / 2)
-//                check = !check
-//            }
-//
-//        case .portrait:
-//            if value == .zero {
-//                value += 1
-//            } else {
-//                self.hourImageView.transform = self.hourImageView.transform.rotated(by: .pi / -2)
-//                self.minuteImageView.transform = self.minuteImageView.transform.rotated(by: .pi / -2)
-//                self.secondsImageView.transform = self.secondsImageView.transform.rotated(by: .pi / -2)
-//            }
-//            check = true
-//        default: break
-//        }
-    }
     
     @objc
     private final func handleMediaButtonPress(_ sender: UIButton) {

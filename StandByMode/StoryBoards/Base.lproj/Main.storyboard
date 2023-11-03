@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -262,16 +261,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="957-Q4-EN3" userLabel="Clock Stack View">
-                                <rect key="frame" x="120.5" y="73.5" width="783" height="381"/>
+                                <rect key="frame" x="88" y="73.5" width="848" height="381"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EY7-Ic-gnk">
-                                        <rect key="frame" x="0.0" y="0.0" width="301.5" height="381"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="381"/>
                                         <fontDescription key="fontDescription" name="FLIPclockBlack" family="FLIPclockBlack" pointSize="300"/>
                                         <color key="textColor" systemColor="systemPinkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVM-iD-tAP" userLabel="Blink Dot View">
-                                        <rect key="frame" x="341.5" y="0.0" width="100" height="381"/>
+                                        <rect key="frame" x="374" y="0.0" width="100" height="381"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKA-Ll-HJj">
                                                 <rect key="frame" x="0.0" y="40" width="100" height="341"/>
@@ -290,7 +289,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vU3-33-jZF">
-                                        <rect key="frame" x="481.5" y="0.0" width="301.5" height="381"/>
+                                        <rect key="frame" x="514" y="0.0" width="334" height="381"/>
                                         <fontDescription key="fontDescription" name="FLIPclockBlack" family="FLIPclockBlack" pointSize="300"/>
                                         <color key="textColor" systemColor="systemMintColor"/>
                                         <nil key="highlightedColor"/>
@@ -304,20 +303,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Jtv-8o-HVo" userLabel="Date Stack View">
                                 <rect key="frame" x="186.5" y="462.5" width="651" height="190"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTX-nD-Qed">
-                                        <rect key="frame" x="0.0" y="0.0" width="151" height="190"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTX-nD-Qed">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="190"/>
                                         <fontDescription key="fontDescription" name="FLIPclockBlack" family="FLIPclockBlack" pointSize="150"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1b-th-v0O">
-                                        <rect key="frame" x="175" y="0.0" width="226" height="190"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="JUL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1b-th-v0O">
+                                        <rect key="frame" x="191" y="0.0" width="270" height="190"/>
                                         <fontDescription key="fontDescription" name="FLIPclockBlack" family="FLIPclockBlack" pointSize="150"/>
                                         <color key="textColor" systemColor="systemTealColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.89999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-sr-yce">
-                                        <rect key="frame" x="425" y="0.0" width="226" height="190"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="WED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.89999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-sr-yce">
+                                        <rect key="frame" x="485" y="0.0" width="166" height="190"/>
                                         <fontDescription key="fontDescription" name="FLIPclockBlack" family="FLIPclockBlack" pointSize="150"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
@@ -329,7 +328,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFg-bJ-Gya">
-                                <rect key="frame" x="829" y="44.5" width="70.5" height="89"/>
+                                <rect key="frame" x="825.5" y="51.5" width="106.5" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="WPS-fD-HFl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1" id="s0G-Zf-e14"/>
@@ -364,10 +363,10 @@
             </objects>
             <point key="canvasLocation" x="770.5078125" y="1.5625"/>
         </scene>
-        <!--Half Alpha View Controller-->
+        <!--Crocked Chars View Controller-->
         <scene sceneID="oRt-H6-fnC">
             <objects>
-                <viewController storyboardIdentifier="HalfAlphaViewController" id="Al1-5v-ccF" customClass="HalfAlphaViewController" customModule="StandByMode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HalfAlphaViewController" id="Al1-5v-ccF" customClass="CrockedCharsViewController" customModule="StandByMode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTf-4H-b6z">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,11 +379,6 @@
             <point key="canvasLocation" x="1414" y="2"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="NHG-CG-CFe">
-            <size key="intrinsicContentSize" width="246" height="20.5"/>
-        </designable>
-    </designables>
     <resources>
         <image name="0" width="166.5" height="166.5"/>
         <image name="icon.list.filled" width="25" height="25"/>

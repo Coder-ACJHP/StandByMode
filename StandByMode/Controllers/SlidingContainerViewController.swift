@@ -24,10 +24,14 @@ class SlidingContainerViewController: UIPageViewController, UIPageViewController
         return viewController
     }()
     
-    private lazy var halfAlphaViewController: HalfAlphaViewController = {
+    private lazy var halfAlphaViewController: CrockedCharsViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "HalfAlphaViewController") as! HalfAlphaViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier: "HalfAlphaViewController") as! CrockedCharsViewController
         return viewController
+    }()
+    
+    private let calendarClockViewController: CalendarClockViewController = {
+        return CalendarClockViewController()
     }()
     
     var individualPageViewControllerList = [UIViewController]()
@@ -51,13 +55,15 @@ class SlidingContainerViewController: UIPageViewController, UIPageViewController
         individualPageViewControllerList = [
             flipClockViewController,
             digitalClockViewController,
-            halfAlphaViewController
+            halfAlphaViewController,
+            calendarClockViewController
         ]
                 
         setViewControllers([individualPageViewControllerList[0]], direction: .forward, animated: true, completion: nil)
         
         // Prevent screen lock
         UIApplication.shared.isIdleTimerDisabled = true
+        // Decrease screen brigtness
         UIScreen.main.brightness = 0.0
     }
     
