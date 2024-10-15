@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>OPTIPrisma-Caps.otf</string>
 		<string>flipclockblack.ttf</string>
 		<string>octopuss.ttf</string>
 	</array>

@@ -30,7 +30,11 @@ class SlidingContainerViewController: UIPageViewController, UIPageViewController
         return viewController
     }()
     
-    private let calendarClockViewController: CalendarClockViewController = {
+    private lazy var linesClockViewController: LinesClockViewController = {
+        return LinesClockViewController()
+    }()
+    
+    private lazy var calendarClockViewController: CalendarClockViewController = {
         return CalendarClockViewController()
     }()
     
@@ -53,6 +57,7 @@ class SlidingContainerViewController: UIPageViewController, UIPageViewController
         dataSource = self
         
         individualPageViewControllerList = [
+            linesClockViewController,
             flipClockViewController,
             digitalClockViewController,
             halfAlphaViewController,

@@ -46,6 +46,10 @@
 		F2A246272AF0FE9100A1B658 /* UIContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A246262AF0FE9100A1B658 /* UIContextMenu.swift */; };
 		F2A2462B2AF0FF1800A1B658 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2462A2AF0FF1800A1B658 /* MenuCell.swift */; };
 		F2A2462E2AF1456000A1B658 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2462D2AF1456000A1B658 /* MarqueeLabel.swift */; };
+		F2B19AE02CBEE2F2003B57A8 /* LinesClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B19ADF2CBEE2F2003B57A8 /* LinesClockViewController.swift */; };
+		F2B19AE22CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B19AE12CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf */; };
+		F2B19AE52CBF34A2003B57A8 /* GlyphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B19AE42CBF34A2003B57A8 /* GlyphView.swift */; };
+		F2B19AE82CBF34BC003B57A8 /* TimeDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B19AE72CBF34BC003B57A8 /* TimeDisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,10 @@
 		F2A246262AF0FE9100A1B658 /* UIContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContextMenu.swift; sourceTree = "<group>"; };
 		F2A2462A2AF0FF1800A1B658 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		F2A2462D2AF1456000A1B658 /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
+		F2B19ADF2CBEE2F2003B57A8 /* LinesClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesClockViewController.swift; sourceTree = "<group>"; };
+		F2B19AE12CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OPTIPrisma-Caps.otf"; sourceTree = "<group>"; };
+		F2B19AE42CBF34A2003B57A8 /* GlyphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphView.swift; sourceTree = "<group>"; };
+		F2B19AE72CBF34BC003B57A8 /* TimeDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 		F2509BFA2AF1E20D00BCDFB3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F2B19AE12CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf */,
 				F27BFEBA2AF28E73000274C4 /* octopuss.ttf */,
 				F2509BFB2AF1E21C00BCDFB3 /* flipclockblack.ttf */,
 			);
@@ -228,6 +237,7 @@
 				F2509BF42AF1D09C00BCDFB3 /* DigitalClockViewController.swift */,
 				F27BFEB82AF28CD9000274C4 /* CrockedCharsViewController.swift */,
 				F2172CC42AF3935400E39914 /* CalendarClockViewController.swift */,
+				F2B19ADF2CBEE2F2003B57A8 /* LinesClockViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +262,8 @@
 		F2A246252AF0FE8100A1B658 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F2B19AE62CBF34B5003B57A8 /* TimeDisplayView */,
+				F2B19AE32CBF3488003B57A8 /* GlyphView */,
 				F2172CCB2AF3D0E200E39914 /* AnalogClockView */,
 				F2172CC62AF3C68300E39914 /* UICalendarView */,
 				F2A2462C2AF1016400A1B658 /* UIContextMenu */,
@@ -268,6 +280,22 @@
 				F2A2462A2AF0FF1800A1B658 /* MenuCell.swift */,
 			);
 			path = UIContextMenu;
+			sourceTree = "<group>";
+		};
+		F2B19AE32CBF3488003B57A8 /* GlyphView */ = {
+			isa = PBXGroup;
+			children = (
+				F2B19AE42CBF34A2003B57A8 /* GlyphView.swift */,
+			);
+			path = GlyphView;
+			sourceTree = "<group>";
+		};
+		F2B19AE62CBF34B5003B57A8 /* TimeDisplayView */ = {
+			isa = PBXGroup;
+			children = (
+				F2B19AE72CBF34BC003B57A8 /* TimeDisplayView.swift */,
+			);
+			path = TimeDisplayView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +368,7 @@
 				F2A246162AF0F80200A1B658 /* RebirthOfAThoughBetween.mp3 in Resources */,
 				01FC99E529BE2ACD00FA036B /* LaunchScreen.storyboard in Resources */,
 				F2A2461F2AF0F80200A1B658 /* MessageFromTheStars.mp3 in Resources */,
+				F2B19AE22CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf in Resources */,
 				01FC99E229BE2ACD00FA036B /* Assets.xcassets in Resources */,
 				F2509BFC2AF1E21C00BCDFB3 /* flipclockblack.ttf in Resources */,
 				01FC99E029BE2ACA00FA036B /* Main.storyboard in Resources */,
@@ -356,11 +385,13 @@
 			files = (
 				01FC99DD29BE2ACA00FA036B /* FlipClockViewController.swift in Sources */,
 				F2509BF92AF1DD0300BCDFB3 /* CustomSlider.swift in Sources */,
+				F2B19AE82CBF34BC003B57A8 /* TimeDisplayView.swift in Sources */,
 				F2A245FD2AF0F00D00A1B658 /* Defaults.swift in Sources */,
 				F2A245FB2AF0F00D00A1B658 /* MusicPlayerItemInfo.swift in Sources */,
 				F2509BF32AF1D00A00BCDFB3 /* SlidingContainerViewController.swift in Sources */,
 				01FC99D929BE2ACA00FA036B /* AppDelegate.swift in Sources */,
 				F27BFEB92AF28CD9000274C4 /* CrockedCharsViewController.swift in Sources */,
+				F2B19AE02CBEE2F2003B57A8 /* LinesClockViewController.swift in Sources */,
 				F27BFEBD2AF291CF000274C4 /* Extensions.swift in Sources */,
 				F2172CCD2AF3D0F900E39914 /* AnalogClockView.swift in Sources */,
 				F2172CC82AF3C69C00E39914 /* CalendarView.swift in Sources */,
@@ -372,6 +403,7 @@
 				F2509BF52AF1D09C00BCDFB3 /* DigitalClockViewController.swift in Sources */,
 				F2A245F92AF0F00D00A1B658 /* MusicPlayerDelegate.swift in Sources */,
 				F2A245FC2AF0F00D00A1B658 /* MusicQueuePlayer.swift in Sources */,
+				F2B19AE52CBF34A2003B57A8 /* GlyphView.swift in Sources */,
 				F2A2462B2AF0FF1800A1B658 /* MenuCell.swift in Sources */,
 				F2A245FE2AF0F00D00A1B658 /* MusicPlayerManager.swift in Sources */,
 				F2A2462E2AF1456000A1B658 /* MarqueeLabel.swift in Sources */,
