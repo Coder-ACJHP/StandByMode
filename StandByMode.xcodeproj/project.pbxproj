@@ -46,6 +46,7 @@
 		F2A246272AF0FE9100A1B658 /* UIContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A246262AF0FE9100A1B658 /* UIContextMenu.swift */; };
 		F2A2462B2AF0FF1800A1B658 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2462A2AF0FF1800A1B658 /* MenuCell.swift */; };
 		F2A2462E2AF1456000A1B658 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2462D2AF1456000A1B658 /* MarqueeLabel.swift */; };
+		F2A766842CBFC3EE0009E2E0 /* ScreenRecord.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F2A766832CBFC3EE0009E2E0 /* ScreenRecord.mp4 */; };
 		F2B19AE02CBEE2F2003B57A8 /* LinesClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B19ADF2CBEE2F2003B57A8 /* LinesClockViewController.swift */; };
 		F2B19AE22CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B19AE12CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf */; };
 		F2B19AE52CBF34A2003B57A8 /* GlyphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B19AE42CBF34A2003B57A8 /* GlyphView.swift */; };
@@ -94,6 +95,7 @@
 		F2A246262AF0FE9100A1B658 /* UIContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContextMenu.swift; sourceTree = "<group>"; };
 		F2A2462A2AF0FF1800A1B658 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		F2A2462D2AF1456000A1B658 /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
+		F2A766832CBFC3EE0009E2E0 /* ScreenRecord.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScreenRecord.mp4; sourceTree = "<group>"; };
 		F2B19ADF2CBEE2F2003B57A8 /* LinesClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesClockViewController.swift; sourceTree = "<group>"; };
 		F2B19AE12CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OPTIPrisma-Caps.otf"; sourceTree = "<group>"; };
 		F2B19AE42CBF34A2003B57A8 /* GlyphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphView.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		F2A246062AF0F7AB00A1B658 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2A766822CBFC3E30009E2E0 /* Videos */,
 				F2509BFA2AF1E20D00BCDFB3 /* Fonts */,
 				F2A246072AF0F7BB00A1B658 /* Audios */,
 				01FC99E129BE2ACD00FA036B /* Assets.xcassets */,
@@ -280,6 +283,14 @@
 				F2A2462A2AF0FF1800A1B658 /* MenuCell.swift */,
 			);
 			path = UIContextMenu;
+			sourceTree = "<group>";
+		};
+		F2A766822CBFC3E30009E2E0 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				F2A766832CBFC3EE0009E2E0 /* ScreenRecord.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		F2B19AE32CBF3488003B57A8 /* GlyphView */ = {
@@ -369,6 +380,7 @@
 				01FC99E529BE2ACD00FA036B /* LaunchScreen.storyboard in Resources */,
 				F2A2461F2AF0F80200A1B658 /* MessageFromTheStars.mp3 in Resources */,
 				F2B19AE22CBF0ED6003B57A8 /* OPTIPrisma-Caps.otf in Resources */,
+				F2A766842CBFC3EE0009E2E0 /* ScreenRecord.mp4 in Resources */,
 				01FC99E229BE2ACD00FA036B /* Assets.xcassets in Resources */,
 				F2509BFC2AF1E21C00BCDFB3 /* flipclockblack.ttf in Resources */,
 				01FC99E029BE2ACA00FA036B /* Main.storyboard in Resources */,

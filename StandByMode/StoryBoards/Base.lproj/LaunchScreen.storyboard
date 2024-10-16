@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,19 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_binaryhood" translatesAutoresizingMaskIntoConstraints="NO" id="0Dy-cK-Gak">
-                                <rect key="frame" x="34" y="264" width="322" height="316"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="316" id="23d-Qq-7s7"/>
-                                    <constraint firstAttribute="width" constant="322" id="vK0-46-N7l"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StandBy Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uha-fB-aX9">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="0Dy-cK-Gak" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8oh-qs-4B0"/>
-                            <constraint firstItem="0Dy-cK-Gak" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WaS-Qx-Bta"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uha-fB-aX9" secondAttribute="bottom" id="8Tp-gn-lC9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uha-fB-aX9" secondAttribute="trailing" id="Rnl-YG-Qs5"/>
+                            <constraint firstItem="Uha-fB-aX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X5r-DV-1hv"/>
+                            <constraint firstItem="Uha-fB-aX9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wbg-IC-DRm"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,9 +40,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="white_binaryhood" width="166.66667175292969" height="166.66667175292969"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
